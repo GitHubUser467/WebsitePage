@@ -136,10 +136,19 @@ trigger++
  
 };
 
+// This I changed 201231
+
+var bobcounter = 0
 bob = window.setInterval(function(){
     if (buttoncounter < boxclick.length) {
         console.log("Backup"); 
         boxclick[buttoncounter].click();
+        bobcounter++
+        if (bobcounter == 2) {
+            var buttonbefore = buttoncounter - 1
+            boxclick0[0].click();
+            bobcounter = 0
+        }
     }
     if (done == 1){
         clearInterval(bob);
@@ -216,6 +225,7 @@ function fCSS() {
 
 
     for (n = 0; containerA.length > n; n++) {
+        var bandtcounter = 1
         var cbuttons = containerA[n].getElementsByClassName('api explanation');
         if (cbuttons) {
             for (p = 0; cbuttons.length > p; p++){
@@ -224,7 +234,26 @@ function fCSS() {
                     containerA[n].getElementsByClassName('tooltipboxcontainer' + n)[p].classList.add("alltooltips")
                 }
                 else {
+                    // if here it means it's a nonclinical button/tooltip
+                    // add number to button
+                    var newnumberdiv = document.createElement('label');
+                    newnumberdiv.innerHTML = bandtcounter
+                    newnumberdiv.classList.add("numberforbutton");
+                    cbuttons[p].parentNode.insertBefore(newnumberdiv, cbuttons[p].nextSibling);
+                    // cbuttons[p].parentNode.appendChild(newnumberdiv);
+                    
+                    // add number to newbox 
+                    var newnumberdiv2 = document.createElement('label');
+                    newnumberdiv2.innerHTML = bandtcounter
+                    newnumberdiv2.classList.add("numberfortool");
+                    var vtool = containerA[n].getElementsByClassName('tooltipboxcontainer' + n)[p]
+                    vtool.getElementsByClassName('content___1dQIM')[0].prepend(newnumberdiv2);
+                    
+                    //counter +1
+                    bandtcounter++
+
                     containerA[n].getElementsByClassName('tooltipboxcontainer' + n)[p].classList.add("nonclinicaltooltip");
+                    
                     containerA[n].getElementsByClassName('tooltipboxcontainer' + n)[p].classList.add("alltooltips")
                 }
             }
@@ -245,6 +274,8 @@ function fCSS() {
 
     var welements = document.getElementsByClassName('weakImpactHighlight___13Vgb');
     var selements = document.getElementsByClassName('strongImpactHighlight___EZjnX');
+    var xelements = document.getElementsByClassName('radarHighlight___3fhcU');
+
     
     if (selements){
         for (i = 0, len = selements.length; i < len; i++) {
@@ -261,6 +292,16 @@ function fCSS() {
             welements[a].style.textDecorationStyle = 'wavy';
         } 
     }
+
+    if (xelements){
+        for (i = 0, len = xelements.length; i < len; i++) {
+            xelements[i].style.textDecoration = 'underline';
+            xelements[i].style.textDecorationColor = '#B70014';
+            xelements[i].style.textDecorationStyle = 'wavy';
+        };        
+    }    
+
+
     console.log('made it here')
 
     document.querySelector('[data-e2e-test-id="context-navigation"]').style.boxShadow = "none"
@@ -281,10 +322,23 @@ function fCSS() {
     for (r = 0; shadowbox.length > r; r++) {
         shadowbox[r].style.filter = "none"
     }
-    document.getElementsByClassName('articleToolbarWrapper___jdZIj translateLevel2___3XUnI')[0].remove();
-    document.getElementsByClassName('floatingContainer___1azu4')[0].remove()
-    
+
+    var theremover = document.getElementsByClassName('articleToolbarWrapper___jdZIj translateLevel2___3XUnI')[0]
+    if (theremover) {
+        theremover.remove()
+    }
+
+    var theremover = document.getElementsByClassName('floatingContainer___1azu4')[0]
+    if (theremover) {
+        theremover.remove()
+    }
+   
     console.log('made it here THREE')
+
+    var topshadow = document.getElementsByClassName('breadcrumbsContainer___xSZ_o')[0]
+    if (topshadow) {
+        topshadow.remove()
+    }
     
     done = 1
 
@@ -296,4 +350,24 @@ function fCSS() {
     
 }
 
+/*
+// cycle through containers
 
+for (e = 0; containerA.length > e; e++) {
+    // for each container cycle through buttons "nonclinicaltooltip" and add 
+    onecontainerallnonclin = containerA[e].getElementsByClassName("nonclinicaltooltip")
+    for (z = 0; onecontainerallnonclin.length > z; z++) {
+
+    }
+}
+
+padding-right: 8px;
+color: #9298a2;
+font-weight: bold;
+
+
+padding: 1px;
+margin-left: 1px;
+color: #b3bec6;
+font-size: 90%;
+*/
