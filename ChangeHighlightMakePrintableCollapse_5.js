@@ -275,9 +275,9 @@ function fCSS() {
     }
 
 
-    var welements = document.getElementsByClassName('weakImpactHighlight___13Vgb');
-    var selements = document.getElementsByClassName('strongImpactHighlight___EZjnX');
-    var xelements = document.getElementsByClassName('radarHighlight___3fhcU');
+    var welements = document.getElementsByClassName('weakImpactHighlight--_WgF7');
+    var selements = document.getElementsByClassName('strongImpactHighlight--NZENV');
+    var xelements = document.getElementsByClassName('radarHighlight--vthyE');
 
     
     if (selements){
