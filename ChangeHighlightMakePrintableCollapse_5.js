@@ -1,4 +1,7 @@
-document.getElementsByClassName('cardContainer___iIzCV justifyHeight___L7iHX')[0].style.boxShadow = "none"
+var Shadowofcard = document.getElementsByClassName('cardContainer___iIzCV justifyHeight___L7iHX')[0]
+if (Shadowofcard){
+    Shadowofcard.style.boxShadow = "none"   
+}
 
 var sidebar = document.getElementsByClassName("container___17zQC pushIconLeft___3aOkV")[0]
 if (sidebar){
@@ -9,7 +12,7 @@ var trigger = 0
 
 var done = 0
 
-var containerA = document.getElementsByClassName('show___8rh3e sectionContainer___17f9Z')
+var containerA = document.getElementsByClassName('show--oleIL sectionContainer--iI11U')
  
 var boxclick0 = document.getElementsByClassName('api explanation');
 
@@ -247,7 +250,7 @@ function fCSS() {
                     newnumberdiv2.innerHTML = bandtcounter
                     newnumberdiv2.classList.add("numberfortool");
                     var vtool = containerA[n].getElementsByClassName('tooltipboxcontainer' + n)[p]
-                    vtool.getElementsByClassName('content___1dQIM')[0].prepend(newnumberdiv2);
+                    vtool.getElementsByClassName('content--_F_rK')[0].prepend(newnumberdiv2);
                     
                     //counter +1
                     bandtcounter++
@@ -312,12 +315,12 @@ function fCSS() {
     console.log('made it here 4')
     document.getElementsByClassName('body-1821082227')[0].style.overflow = "visible";
     console.log('made it here 5')
-    document.getElementsByClassName('Page___eFj4O')[0].style.overflow = "visible";
+    document.getElementsByClassName('Page--yI_75')[0].style.overflow = "visible";
     console.log('made it here 6')
     document.getElementsByClassName('contentContainer-1154699314--topBarOffset-4062678711')[0].style.inset = "0px 0px 0px";
     console.log('made it here 7')
-    document.getElementsByClassName('topNavContainer___2fToj')[0].remove()
-    document.getElementsByClassName('cardContainer___iIzCV justifyHeight___L7iHX')[0].style.boxShadow = "none"
+    document.getElementsByClassName('topNavContainer--__2jX')[0].remove()
+    document.getElementsByClassName('cardContainer--yeUIo justifyHeight--t6OkG')[0].style.boxShadow = "none"
     shadowbox = document.getElementsByClassName('tooltipContainer-2258669389--filterShadow-3387428294--hidden-661153127')
     for (r = 0; shadowbox.length > r; r++) {
         shadowbox[r].style.filter = "none"
