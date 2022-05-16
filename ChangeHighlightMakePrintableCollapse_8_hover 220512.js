@@ -36,6 +36,8 @@ for (b = 0, len = boxclick0.length; b < len; b++) {
 pshadow = document.querySelectorAll('[data-e2e-test-id="tooltip-container"]')
 for (e = 0; pshadow.length > e; e++) {
     pshadow[e].style.filter = "none"
+    //220516 adding -3 so it doesn't cover screen
+    pshadow[e].style.zIndex = -3
 }
 
 var h = 0;
