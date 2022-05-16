@@ -1,3 +1,5 @@
+// 220513 changed time to 500 from 800, check if updated in github
+
 var Shadowofcard = document.getElementsByClassName('cardContainer___iIzCV justifyHeight___L7iHX')[0]
 if (Shadowofcard){
     Shadowofcard.style.boxShadow = "none"   
@@ -120,6 +122,7 @@ var callback = function(mutationsList, observer) {
                 console.log("inside of callback if statement" + h);
                 toolbox.style.filter = "none";
                 newdiv.innerHTML = toolbox.innerHTML;
+                toolbox.classList.add("hovercontainer");
                 containerA[h].appendChild(newdiv);
 
                 newdiv.classList.add("tooltipboxcontainer" + h);
