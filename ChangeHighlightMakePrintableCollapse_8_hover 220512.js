@@ -82,7 +82,7 @@ function whichContainer() {
                 console.log("Yes all containers done; I cleared Interval" + h);
                 clearInterval(checkContents);
             }
-        },800);
+        },500);
     }
     else {
         console.log("boxclick is empty" + h);
