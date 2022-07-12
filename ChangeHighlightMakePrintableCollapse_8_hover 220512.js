@@ -24,7 +24,7 @@ var trigger = 0
 
 var done = 0
 
-var containerA = document.getElementsByClassName('show--oleIL sectionContainer--iI11U')
+var containerA = document.getElementsByClassName('show--nVz6U sectionContainer--aQ_aq')
  
 var boxclick0 = document.getElementsByClassName('api explanation');
 
@@ -302,9 +302,9 @@ function fCSS() {
     }
 
 
-    var welements = document.getElementsByClassName('weakImpactHighlight--_WgF7');
-    var selements = document.getElementsByClassName('strongImpactHighlight--NZENV');
-    var xelements = document.getElementsByClassName('radarHighlight--vthyE');
+    var welements = document.getElementsByClassName('weakImpactHighlight--nsKSQ');
+    var selements = document.getElementsByClassName('strongImpactHighlight--qLdOc');
+    var xelements = document.getElementsByClassName('radarHighlight--lVkMF');
 
     
     if (selements){
@@ -336,6 +336,7 @@ function fCSS() {
 
     document.querySelector('[data-e2e-test-id="context-navigation"]').style.boxShadow = "none"
     console.log('made it here 2')
+    //220520 currently only working until here
     document.getElementsByClassName('focus-3600147890--focusNavIsClosed-4094548731')[0].style.display = "block";
     console.log('made it here 3')
     document.getElementsByClassName('contentContainer-1154699314--topBarOffset-4062678711')[0].style.overflow = "visible";
