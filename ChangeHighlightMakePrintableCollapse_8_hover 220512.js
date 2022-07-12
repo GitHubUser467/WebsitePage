@@ -277,7 +277,7 @@ function fCSS() {
                     newnumberdiv2.innerHTML = bandtcounter
                     newnumberdiv2.classList.add("numberfortool");
                     var vtool = containerA[n].getElementsByClassName('tooltipboxcontainer' + n)[p]
-                    vtool.getElementsByClassName('content--_F_rK')[0].prepend(newnumberdiv2);
+                    vtool.getElementsByClassName('content--kLKAu')[0].prepend(newnumberdiv2);
                     
                     //counter +1
                     bandtcounter++
