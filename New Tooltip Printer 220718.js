@@ -93,10 +93,10 @@ function myTimerFunction3(){
     }
     else if (counterx == 1){
         console.log('counterx: '+counterx)
-        window.print()
+        //window.print()
         counterx++
         window.onload = function() {
-            window.print()
+            //window.print()
             counterx++
         }
     }
